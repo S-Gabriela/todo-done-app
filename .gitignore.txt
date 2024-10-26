@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Other project files you want to exclude
+*.env
+dist/
+build/
