@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+/* App.css for the todo-done app */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f1fb;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Centered headers */
+h1, h2, h3 {
+    font-family: 'Pacifico', cursive;
+    color: #ff858d; /* pastel pink */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Main container */
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Styling the forms */
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="text"], input[type="password"] {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #f8f8f8;
+    font-size: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling the buttons */
+button {
+    background-color: #bde0fe; /* Light blue pastel */
+    color: #333333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px;
+}
+
+    button:hover {
+        background-color: #a3d4ff; /* Slightly darker blue */
+        transform: scale(1.05);
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+/* Style the welcome page */
+.welcome-nav {
+    font-size: 1.5em; /* Increase font size */
+    text-align: center; /* Center the links */
+    margin-top: 20px;
+}
+
+.welcome-nav a {
+    margin: 0 20px; /* Add more spacing between the links */
+    text-decoration: none;
+    color: #ff858d; /* pastel pink */
+    font-weight: bold;
+}
+
+.welcome-nav a:hover {
+    color: #ff6b70; /* Slightly darker */
+}
+
+/* Styling the todolist */
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+    .todo-list li {
+        background-color: #fefefe;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1em;
+        transition: transform 0.2s;
+    }
+
+        .todo-list li:hover {
+            transform: scale(1.02);
+        }
+
+        /* Completed task styling */
+        .todo-list li.completed {
+            text-decoration: line-through;
+            color: #a0a0a0;
+            background-color: #f0f0f0;
+        }
+
+/* Delete button */
+button.delete-btn {
+    background-color: #ff858d; /* Pastel pink */
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    button.delete-btn:hover {
+        background-color: #ff6b70; /* Slightly darker */
+        transform: scale(1.05);
+    }
+
+/* Aligning buttons */
+.task-buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* Text alignment in task input and buttons */
+.task-input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    /* Adjusting text box width for a neater look */
+    .task-input-container input[type="text"] {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    /* Making the "Add Task" button match the input field width */
+    .task-input-container button {
+        width: 90%;
+        max-width: 500px;
+        margin-top: 10px;
+    }
+
+/* Navigation styling */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+    nav a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: #ff858d;
+        font-weight: bold;
+    }
+
+        nav a:hover {
+            color: #ff6b70;
+        }
+
+    /* Logout button specific styling */
+    nav button {
+        margin-left: 10px;
+    }
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    color: #666666;
 }
